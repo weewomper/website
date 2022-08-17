@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = 'styles.css' rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f18b09f749.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i></i></li>
+            <li class="btn loginbtn"><a href="#">Login</a></li>
+            <li class="btn profilebtn"><a href="#">Profile</a></li>
+            <li class="btn contactbutton"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="articles">
+        <div class="wrapper">
+            <div class="article">
+                <h2>Title</h2>
+                <h3>Author, data and time</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue odio vitae sem auctor sagittis. Aenean nec sem nisl. Nunc tempus fermentum erat, ac bibendum lectus rhoncus non. Praesent in luctus orci. Nulla non ullamcorper orci. Curabitur lacinia id lectus quis tempor. Aenean commodo orci maximus, auctor risus non, tincidunt nunc. Maecenas in lacinia justo.</p>
+            </div>
+            <div class="article">
+                <h2>Title</h2>
+                <h3>Author, data and time</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue odio vitae sem auctor sagittis. Aenean nec sem nisl. Nunc tempus fermentum erat, ac bibendum lectus rhoncus non. Praesent in luctus orci. Nulla non ullamcorper orci. Curabitur lacinia id lectus quis tempor. Aenean commodo orci maximus, auctor risus non, tincidunt nunc. Maecenas in lacinia justo.</p>
+            </div>
+            <div class="article">
+                <h2>Title</h2>
+                <h3>Author, data and time</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue odio vitae sem auctor sagittis. Aenean nec sem nisl. Nunc tempus fermentum erat, ac bibendum lectus rhoncus non. Praesent in luctus orci. Nulla non ullamcorper orci. Curabitur lacinia id lectus quis tempor. Aenean commodo orci maximus, auctor risus non, tincidunt nunc. Maecenas in lacinia justo.</p>
+            </div>
+        </div>
+    </div>
+    <content></content>
+    
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+  </div>
+
+  <footer></footer>
+
+  <style>
+    *,
+    ::before,
+    ::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
+        overflow-y: hidden;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        /* grid-auto-rows: minmax(100px, auto); */
+        height: 100vh;
+        width: 100%;
+        max-width: 100vw;
+        max-height: 100vh;
+        grid-auto-rows: minmax(min-content, max-content);
+    }
+
+    content {
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+    background-color: rgba(255,255,100,0.25);
+
+    }
+    .articles {
+    grid-column: 1;
+    grid-row: 2 / 6;
+    /* background-color: rgba(100,255,100,0.25); */
+    /* overflow-x: hidden; */
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 2rem; */
+    flex-direction: column;
+    /* min-width: 0;
+    min-height: 0; */
+    }
+    .wrapper {
+    /* width: 10vw; */
+    /* position: relt; */
+    /* overflow-y: scroll; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    }
+    .article {
+        padding: 2em;
+        background-color: azure;
+        width: 90%;
+        border-radius: 2em;
+    }
+    footer {
+        background-color: black;
+        width: 100%;
+        height: 6rem;
+        transform: translateY(-100%)
+    }
+    nav {
+    grid-column: .5 / 3;
+    /* grid-row: 1 / 2; */
+    background-color: rgba(100,255,100,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100%;
+    }   
+    nav ul{
+        list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+    nav ul li {
+        /* vertical-align: middle; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* margin-left: 10rem; */
+        /* height: 100%; */
+        /* line-height: 100%; */
+        /* padding: ; */
+        /* display: inline; */
+        /* margin: 0 auto; */
+        /* margin-right: 2rem; */
+        /* background-color: rgba(100, 255, 100, 0.5); */
+        float: left;
+        display: flex;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        cursor: pointer;
+        user-select: none;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li a {
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+    }
+    li:hover {
+        background-color: #111;
+    }
+/* 
+    .four {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: rgba(100,255,100,0.25);
+
+    }
+    .five {
+    grid-column: 2;
+    grid-row: 4;
+    background-color: rgba(100,255,100,0.25);
+
+    }
+    .six {
+    grid-column: 3;
+    grid-row: 4;
+    background-color: rgba(100,255,100,0.25);
+
+    } */
+
+  </style>
+</body>
+</html>
